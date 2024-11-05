@@ -19,6 +19,8 @@
     "network",
     "temperature",
     "clock",
+    "tray",
+    "custom/nekobar",
     ],
     "hyprland/window": {
       "format": "{}",
@@ -74,8 +76,14 @@
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": " ⚠ ",
-      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+      "format-alt": "{ifname}: {ipaddr}/{cidr}",
+      "on-click": "nm-applet",
     },
+  "custom/nekobar": {
+    "tooltip": true,
+    "exec": "/home/ltfrost/gui/waybar_module/nekobar/target/release/nekobar",
+    "return-type": "json",
+  },
     "pulseaudio": {
       "format": "{icon}  {volume}%",
       "format-bluetooth": "{volume}% {icon} {format_source}",
